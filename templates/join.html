@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Join Course Form</title>
+</head>
+<body>
+
+<h1>Join Course: {{data}}</h1>
+<form action="{{url_for('join_course', course_id=course_id)}}" method="post">
+	<p>Enter your email</p>
+	<input type="text" name="email">
+	<input type="submit" label="Join!">
+</form>
+
+<a href="{{url_for('index')}}"><button>Back</button></a>
+
+</body>
+</html>

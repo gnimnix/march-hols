@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Add course</title>
+</head>
+<body>
+<h1>Add course</h1>
+<form action="{{url_for('add_course')}}" method="post">
+	<p>Enter course name:</p>
+	<input type="text" name="name">
+	<p>Enter max users:</p>
+	<input type="text" name="max_users">
+	<input type="submit" label="Add!">
+</form>
+<a href="{{url_for('index')}}"><button>Back</button></a>
+</body>
+</html>

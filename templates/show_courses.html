@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Show Courses</title>
+</head>
+<body>
+<h1>{{course_name}}</h1>
+<table>
+	<tr>
+		<td>User Emails</td>
+	</tr>
+	
+	{% for ele in data %}
+	<tr>
+		<td>{{ele[0]}}</td>
+	</tr>
+	{%endfor%}
+</table>
+
+<a href="{{url_for('index')}}"><button>Back</button></a>
+</body>
+</html>

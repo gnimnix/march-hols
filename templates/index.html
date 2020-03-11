@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<h1>Courses</h1>
+	<table>
+		<tr>
+			<td>Course ID</td>
+			<td>Course Name</td>
+			<td>Max number of users</td>
+			<td>Current number of users</td>
+		</tr>
+		{% for i in range(data|length) %}
+		<tr>
+			<td>{{data[i][0]}}</td>
+			<td>{{data[i][1]}}</td>
+			<td>{{data[i][2]}}</td>
+			<td>{{max_users[i]}}</td>
+			<td><a href="{{url_for('join_course', course_id=data[i][0])}}">
+				<button>
+					Join
+				</button>
+			</a></td>
+			<td>
+				<a href="{{url_for('show_courses', course_id=data[i][0])}}"><button>
+					Show
+				</button></a>
+			</td>
+		</tr>
+		{%endfor%}
+	</table>
+	<a href="{{url_for('add_course')}}"><button>Add Course</button></a>
+</body>
+</html>
